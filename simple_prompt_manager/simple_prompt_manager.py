@@ -85,3 +85,12 @@ class PromptManager:
 
         pattern = re.compile(r'<<(\w+)>>')
         return pattern.sub(replace_placeholder, template)
+
+    def list_templates(self):
+        """
+        Lists all available templates.
+
+        Returns:
+            list: A list of template names.
+        """
+        return list(self.templates.keys())

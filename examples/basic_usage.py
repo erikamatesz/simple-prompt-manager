@@ -26,3 +26,6 @@ pm.add_template("another_one_bites_the_dust", "Are you ready? Are you ready for 
 # Generate a prompt
 prompt3 = pm.generate_prompt("another_one_bites_the_dust", seat="chair")
 print(prompt3)  # Output: Are you ready? Are you ready for this? Are you hanging on the edge of your chair?
+
+# List all available templates
+print("Available templates:", pm.list_templates())

@@ -53,3 +53,17 @@ def test_generate_prompt_missing_variable(setup_and_teardown):
     pm.add_template("bohemian_rhapsody", queen_template_content)
     with pytest.raises(ValueError, match="Missing variable in the template: illusion"):
         pm.generate_prompt("bohemian_rhapsody")
+
+def test_list_templates(setup_and_teardown):
+    test_dir = setup_and_teardown
+    pm = PromptManager(templates_dir=test_dir)
+    pm.add_template("bohemian_rhapsody", "Is this the real life? Is this just <<illusion>>?")
+    pm.add_template("we_will_rock_you", "<<name>>, you got mud on your face, you big disgrace!")
+    pm.add_template("another_one_bites_the_dust", "Are you ready? Are you ready for this? Are you hanging on the edge of your <<seat>>?")
+    
+    templates_list = pm.list_templates()
+    assert "test_template" in templates_list, "Template 'test_template' should be in the list."
+    assert "bohemian_rhapsody" in templates_list, "Template 'bohemian_rhapsody' should be in the list."
+    assert "we_will_rock_you" in templates_list, "Template 'we_will_rock_you' should be in the list."
+    assert "another_one_bites_the_dust" in templates_list, "Template 'another_one_bites_the_dust' should be in the list."
+    assert len(templates_list) == 4, "There should be exactly 4 templates in the list."
