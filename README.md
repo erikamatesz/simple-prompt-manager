@@ -1,6 +1,10 @@
-# Simple Prompt Manager
+<div style="text-align: center;">
+    <img src="assets/readme_image.png" />
+</div>
 
-It is a lightweight library for managing and generating text prompts based on templates. It supports loading templates from text files and creating them at runtime, allowing for dynamic text generation by replacing placeholders with specified values.
+# Welcome to the Simple Prompt Manager! ✨
+
+This is a very simple and lightweight library designed for managing and generating text prompts based on templates, particularly useful in generative AI projects. It supports loading templates from text files and creating them at runtime, allowing for dynamic text generation by replacing placeholders with specified values. This makes it an ideal tool for applications that require flexible and dynamic prompt generation, such as chatbots, content creation tools, and other AI-driven applications.
 
 ## Installation
 
@@ -60,6 +64,10 @@ print(prompt)  # Output: Goodbye, Bob! See you soon.
 ## Examples
 
 You can find an example script demonstrating how to use this package with Queen song lyrics in the `examples` directory. The `basic_usage.py` script covers adding templates at runtime and generating prompts inspired by songs like "Bohemian Rhapsody", "We Will Rock You", and "Another One Bites the Dust".
+
+## Changelog
+
+For a detailed list of changes and updates, please refer to the [CHANGELOG](CHANGELOG.md).
 
 ## License
 
