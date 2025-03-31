@@ -1,6 +1,4 @@
-<div style="text-align: center;">
-    <img src="assets/readme_image.png" />
-</div>
+![](https://raw.githubusercontent.com/erikamatesz/simple-prompt-manager/main/assets/readme_image.png)
 
 # Welcome to the Simple Prompt Manager! ✨
 
